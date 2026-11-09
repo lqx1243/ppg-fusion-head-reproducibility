@@ -14,7 +14,8 @@ def verify_inputs():
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--tables-only',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--tables-only',action='store_true');p.add_argument('--conference',action='store_true',help='Also regenerate the compact ICAID figures');a=p.parse_args()
+    if a.tables_only and a.conference: p.error('--tables-only and --conference cannot be combined')
     verify_inputs();out=ROOT/'outputs';out.mkdir(exist_ok=True)
     tables=calculate(ROOT/'inputs');dest=out/'tables';dest.mkdir(exist_ok=True)
     for name,rows in tables.items(): write_csv(dest/(name+'.csv'),rows)
@@ -39,5 +40,16 @@ def main():
         for script in ('plot_signals.py','plot_architecture.py','plot_results.py','plot_cases.py'):
             subprocess.run([sys.executable,str(ROOT/'src'/script)],check=True)
         subprocess.run([sys.executable,str(ROOT/'scripts/training_diagnostics.py'),'--history-csv',str(ROOT/'inputs/training_history.csv'),'--selected-csv',str(ROOT/'inputs/training_selected_epochs.csv'),'--output-dir',str(out/'training'),'--figure-dir',str(out/'figures')],check=True)
+    if a.conference:
+        conference=out/'conference';conference.mkdir(exist_ok=True)
+        commands=[
+            ('conference_plot_signals.py',['--input',str(ROOT/'inputs/signal_example.npz'),'--output',str(conference)]),
+            ('conference_plot_architecture.py',['--input',str(ROOT/'inputs/signal_example.npz'),'--output',str(conference)]),
+            ('conference_plot_results.py',['--inputs',str(core),'--output',str(conference)]),
+            ('conference_plot_cases.py',['--inputs',str(ROOT/'inputs'),'--output',str(conference)]),
+            ('conference_plot_training_curve.py',['--input',str(out/'training/training_validation_curve_summary.csv'),'--output',str(conference/'training_validation_curves.pdf')]),
+        ]
+        for script,arguments in commands:
+            subprocess.run([sys.executable,str(ROOT/'src'/script),*arguments],check=True)
     print('Reproduction complete:',out)
 if __name__=='__main__': main()

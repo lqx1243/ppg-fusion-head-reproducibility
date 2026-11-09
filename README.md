@@ -4,7 +4,7 @@ This repository supports **Joint Evaluation of Regression Heads and PPG–ACC Fu
 
 The study is an empirical comparison of fusion rankings under different regression heads and checkpoint-selection budgets. Feature fusion improves on early fusion with an MLP within epochs 1–40, while PPG-only with an MLP has the lowest overall mean MAE. The results do not demonstrate a general benefit from adding ACC. The 15-participant cohort had been explored previously; this is an internal participant-held-out evaluation.
 
-**Availability:** prepared as an independent local repository on 9 November 2026. No hosted repository URL or collaborator access has been established by this package. Upload and access arrangements are separate steps. Contact: qixin.luo.contact@gmail.com.
+**Availability:** hosted in the [private GitHub repository](https://github.com/lqx1243/ppg-fusion-head-reproducibility). Access may be requested from qixin.luo.contact@gmail.com.
 
 ## Regenerate the archived manuscript results
 
@@ -26,7 +26,7 @@ The generated files are under `outputs/`:
 
 `python scripts/reproduce.py --tables-only` regenerates numerical tables without plotting. The results use participant-equal means and population standard deviations across the five seeds; window-weighted summaries are also retained. A seed is not an independent participant.
 
-Times New Roman is used when installed; otherwise figures use DejaVu Serif. This affects typography, not results. No conference template is included because the target conference is not final.
+Times New Roman is used when installed; otherwise figures use DejaVu Serif. This affects typography, not results. To also regenerate the compact figures prepared for the tentative ICAID 2026 layout, run `python scripts/reproduce.py --conference`; these are written to `outputs/conference/`. The same observations and numerical summaries are re-laid out with readable labels. Figure 6 uses lowercase (a) and (b) panels. Manuscript source and the conference template are maintained separately from this research repository.
 
 ## Included evidence
 

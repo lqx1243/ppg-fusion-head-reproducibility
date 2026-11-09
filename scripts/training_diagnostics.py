@@ -163,7 +163,7 @@ def plot_curves(curves, figure_dir):
                          'font.size': 9, 'axes.titlesize': 10, 'pdf.fonttype': 42})
     fig, axes = plt.subplots(1, 2, figsize=(6.8, 2.7), sharex=True, sharey=True, layout='constrained')
     colors = ('#315a9d', '#d1852d', '#248276')
-    for ax, head, title in zip(axes, ('linear', 'mlp'), ('Linear regression head', 'MLP regression head')):
+    for ax, head, title in zip(axes, ('linear', 'mlp'), ('(a) Linear regression head', '(b) MLP regression head')):
         for base, color in zip(range(3), colors):
             mode = f'r{base}_{head}'
             rows = [row for row in curves if row['mode'] == mode]
