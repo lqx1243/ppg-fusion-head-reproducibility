@@ -1,0 +1,74 @@
+{
+  "model_parity": {
+    "r0_linear": {
+      "initial_state_equal": true,
+      "synthetic_forward_equal": true,
+      "synthetic_adamw_step_equal": true
+    },
+    "r0_mlp": {
+      "initial_state_equal": true,
+      "synthetic_forward_equal": true,
+      "synthetic_adamw_step_equal": true
+    },
+    "r1_linear": {
+      "initial_state_equal": true,
+      "synthetic_forward_equal": true,
+      "synthetic_adamw_step_equal": true
+    },
+    "r1_mlp": {
+      "initial_state_equal": true,
+      "synthetic_forward_equal": true,
+      "synthetic_adamw_step_equal": true
+    },
+    "r2_linear": {
+      "initial_state_equal": true,
+      "synthetic_forward_equal": true,
+      "synthetic_adamw_step_equal": true
+    },
+    "r2_mlp": {
+      "initial_state_equal": true,
+      "synthetic_forward_equal": true,
+      "synthetic_adamw_step_equal": true
+    }
+  },
+  "train_only_scaler_parity": {
+    "outer_S1": true,
+    "outer_S10": true,
+    "outer_S11": true,
+    "outer_S12": true,
+    "outer_S13": true,
+    "outer_S14": true,
+    "outer_S15": true,
+    "outer_S2": true,
+    "outer_S3": true,
+    "outer_S4": true,
+    "outer_S5": true,
+    "outer_S6": true,
+    "outer_S7": true,
+    "outer_S8": true,
+    "outer_S9": true
+  },
+  "summary_parity": {
+    "overall_summary.csv": {
+      "rows": 24,
+      "numeric_values_matched": 696,
+      "absolute_tolerance": 1e-10
+    },
+    "model_complexity.csv": {
+      "rows": 6,
+      "numeric_values_matched": 12,
+      "absolute_tolerance": 1e-10
+    },
+    "activity_summary.csv": {
+      "rows": 216,
+      "numeric_values_matched": 5184,
+      "absolute_tolerance": 1e-10
+    }
+  },
+  "synthetic_only": true,
+  "participant_model_inference": false,
+  "formal_training": false,
+  "python": "3.12.11 (main, Apr 13 2026, 16:05:10) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "torch": "2.14.1",
+  "numpy": "2.5.3"
+}

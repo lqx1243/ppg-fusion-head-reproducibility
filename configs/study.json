@@ -1,0 +1,160 @@
+{
+  "protocol_id": "wrist_fusion_head_budget_v2",
+  "models": {
+    "r0_linear": {
+      "base": "r0",
+      "conv_linear_macs": 2879552,
+      "encoder_count": 1,
+      "head": "linear",
+      "head_features": 64,
+      "head_hidden": null,
+      "input_channels": 1,
+      "parameters": 51169,
+      "widths": [
+        16,
+        32,
+        64,
+        64
+      ]
+    },
+    "r0_mlp": {
+      "base": "r0",
+      "conv_linear_macs": 2881568,
+      "encoder_count": 1,
+      "head": "mlp",
+      "head_features": 64,
+      "head_hidden": 32,
+      "input_channels": 1,
+      "parameters": 53217,
+      "widths": [
+        16,
+        32,
+        64,
+        64
+      ]
+    },
+    "r1_linear": {
+      "base": "r1",
+      "conv_linear_macs": 3063872,
+      "encoder_count": 1,
+      "head": "linear",
+      "head_features": 64,
+      "head_hidden": null,
+      "input_channels": 4,
+      "parameters": 51889,
+      "widths": [
+        16,
+        32,
+        64,
+        64
+      ]
+    },
+    "r1_mlp": {
+      "base": "r1",
+      "conv_linear_macs": 3065888,
+      "encoder_count": 1,
+      "head": "mlp",
+      "head_features": 64,
+      "head_hidden": 32,
+      "input_channels": 4,
+      "parameters": 53937,
+      "widths": [
+        16,
+        32,
+        64,
+        64
+      ]
+    },
+    "r2_linear": {
+      "base": "r2",
+      "conv_linear_macs": 2832984,
+      "encoder_count": 2,
+      "head": "linear",
+      "head_features": 88,
+      "head_hidden": null,
+      "input_channels": 4,
+      "parameters": 48907,
+      "widths": [
+        11,
+        22,
+        44,
+        44
+      ]
+    },
+    "r2_mlp": {
+      "base": "r2",
+      "conv_linear_macs": 2835744,
+      "encoder_count": 2,
+      "head": "mlp",
+      "head_features": 88,
+      "head_hidden": 32,
+      "input_channels": 4,
+      "parameters": 51699,
+      "widths": [
+        11,
+        22,
+        44,
+        44
+      ]
+    }
+  },
+  "model_order": [
+    "r0_linear",
+    "r0_mlp",
+    "r1_linear",
+    "r1_mlp",
+    "r2_linear",
+    "r2_mlp"
+  ],
+  "seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005
+  ],
+  "endpoints": [
+    12,
+    40
+  ],
+  "hyperparams": {
+    "augmentation": false,
+    "batch_size": 256,
+    "beta": 1.0,
+    "clip_bpm": [
+      30,
+      220
+    ],
+    "early_stopping": false,
+    "improvement_min": 0.0001,
+    "loss": "SmoothL1Loss",
+    "lr": 0.001,
+    "max_epochs": 40,
+    "optimizer": "AdamW",
+    "refit": false,
+    "scheduler": null,
+    "weight_decay": 0.0001
+  },
+  "selection": {
+    "normalization_role": "train_only",
+    "outer_gate": "freeze all 450 training records and both selected endpoint checkpoint hashes before any outer model forward",
+    "primary_endpoint": 40,
+    "refit_on_14": false,
+    "role": "inner",
+    "rule": "strict improvement greater than 0.0001 bpm; first retained near-tie wins",
+    "sampler": "independent torch.Generator(seed), one randperm per epoch, common across all six modes",
+    "score_dtype": "float32",
+    "seed_selection": false,
+    "sensitivity_endpoint": 12,
+    "test_screening": false
+  },
+  "counts": {
+    "formal_epochs": 18000,
+    "logical_selected_endpoints": 900,
+    "maximum_distinct_weights": 900,
+    "metadata_arrays": 270,
+    "prediction_vectors_per_endpoint": 3,
+    "saved_prediction_vectors": 2700,
+    "trajectories": 450
+  }
+}

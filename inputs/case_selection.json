@@ -1,0 +1,52 @@
+{
+  "activity_definition": "Original majority activity within each 8-second window, not a new sample-level activity classification.",
+  "cases": [
+    {
+      "activity_code": 7,
+      "activity_name": "walking",
+      "eligible_candidates": 184,
+      "end_window": 3228,
+      "n_windows": 57,
+      "r0_mlp_mae_bpm": 7.238992657577782,
+      "r1_mlp_mae_bpm": 21.64579505251165,
+      "r2_mlp_mae_bpm": 50.397265116373696,
+      "record_end_seconds": 6464,
+      "record_start_seconds": 6344,
+      "segment_seconds": 120,
+      "selection_model": "r0_mlp",
+      "start_window": 3172,
+      "subject": 8,
+      "walking_windows": 240
+    },
+    {
+      "activity_code": 7,
+      "activity_name": "walking",
+      "eligible_candidates": 251,
+      "end_window": 3536,
+      "n_windows": 57,
+      "r0_mlp_mae_bpm": 18.36223508600603,
+      "r1_mlp_mae_bpm": 16.01358821935821,
+      "r2_mlp_mae_bpm": 11.309894494843064,
+      "record_end_seconds": 7080,
+      "record_start_seconds": 6960,
+      "segment_seconds": 120,
+      "selection_model": "r2_mlp",
+      "start_window": 3480,
+      "subject": 14,
+      "walking_windows": 307
+    }
+  ],
+  "clipping_bpm": [
+    30,
+    220
+  ],
+  "endpoint": 40,
+  "main_results": "No participants, windows, seeds, checkpoint choices or aggregate study results were changed.",
+  "original_v5_group_selection_rule": "S8: largest deterioration nontransient activity, n>=50; other participant: largest improvement nontransient person/activity, n>=50. Within each selected cell choose window whose five-seed mean absolute-error difference is closest to its cell median; ties by subject, activity, window. Context fixed at +/-30 original window IDs within same subject.",
+  "rationale": "Show a low-error excerpt for the better model in each of the previously selected adverse/favorable participant-activity groups. The objective differs explicitly by panel, so these are selected illustrations, not representative or unbiased estimates of performance.",
+  "rule": "Retain the V5 S8 and S14 walking groups, seed 3001 and endpoint 40. Enumerate every contiguous set of 57 original 8-second windows (2-second step), all labelled walking. Select the minimum clipped-prediction segment MAE for PPG-only in S8 and feature fusion in S14; exact ties take the earliest start window. Retain all three model traces without smoothing.",
+  "seed": 3001,
+  "selection_precision": "float64 MAE from archived float32 labels and predictions; no rounded scores used",
+  "status": "post_hoc_illustrative_selection_only",
+  "time_definition": "The union of 57 windows covers exactly 120 seconds: 56*2+8. Points are placed at window centers 4,6,...,116 seconds within the segment. Start-time and center-time spans are 112 seconds; the underlying input coverage is 120 seconds."
+}

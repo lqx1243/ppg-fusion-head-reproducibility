@@ -1,0 +1,15 @@
+{
+  "scripts/analysis/wrist_fusion_head_budget_v2.py": "98d4b03c7d6381adfa0d064de784857df2f9bee2089daafa27ac035c482d4f6b",
+  "scripts/analysis/wrist_loso_data.py": "12e5a56a83600aa835c94dee5c3094a3186649a9cc74566fef6e6048a2a73166",
+  "scripts/analysis/run_fusion_head_budget.py": "44a93ca50d245394e777fa9336386e5522ad443ff0217ab3e2ec540ef3fa2294",
+  "scripts/analysis/exp_small_cnn.py": "1e8668f9d15e3ebe2465efb28e5d9a74f3f03ffacf42e8bdebcc77d4b1c68e0e",
+  "scripts/data/05_build_cache.py": "ca3cc4c555f5dd0ab7248a2511a36133a7ea8c4957530dce0b48cafa1ca3d846",
+  "scripts/data/12_build_aligned.py": "11bfd8c63c2f938475f46ef597ad79bc27d3191573e4c0ee565c26152b04358b",
+  "scripts/data/13_compare_three_methods.py": "c1c8852a5ed3aae54acb0470ebf935b2277ae59e3855e54c8928a07b036a1bd6",
+  "scripts/paper/recompute_v5_tables.py": "d8004e44489f18d00a606079f1aa0ebaa2d931907f7589013810030fb7c9c9b4",
+  "scripts/paper/build_v6_main_tables.py": "f9c07046bdd6fefa4e63794380e93d4f28ff23b6bd22a5cde8776aafe30a7445",
+  "scripts/paper/build_v6_signal_figure.py": "57cfc99ec366edbd79a036e78570f202fe8ad8659fbc51d136ab4ae6b18668e4",
+  "scripts/paper/build_v5_fusion_diagram.py": "83c200608a3545ea64d4533a91aab883ab53390bb167d7ca627203bebbdf768c",
+  "scripts/paper/build_v5_result_figures.py": "3d7446c7e86da3b8abb2a1f74fdf18fb267a040d69d7ac6726f91ce27888e9da",
+  "scripts/paper/build_v6_case_figure.py": "5a37276d4b07f3f28f9e36c0e7fdd45cafbd6e0931d1f71ef110df83938fd183"
+}

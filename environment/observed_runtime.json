@@ -1,0 +1,62 @@
+{
+  "environment": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cpu_interop_threads": 1,
+    "cpu_threads": 8,
+    "cuda_compiled": null,
+    "device": "cpu",
+    "logical_processors": 8,
+    "machine": "x86_64",
+    "numpy": "2.5.3",
+    "packages": [
+      "Jinja2==3.1.6",
+      "MarkupSafe==3.0.3",
+      "contourpy==1.4.0",
+      "cycler==0.12.1",
+      "filelock==3.32.3",
+      "fonttools==4.67.0",
+      "fsspec==2026.7.0",
+      "kiwisolver==1.5.1",
+      "matplotlib==3.11.2",
+      "mpmath==1.3.0",
+      "networkx==3.6.1",
+      "numpy==2.5.3",
+      "packaging==26.3",
+      "pillow==13.0.0",
+      "pyparsing==3.3.3",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.18.1",
+      "setuptools==78.1.0",
+      "six==1.17.0",
+      "sympy==1.14.0",
+      "torch==2.14.1+cpu",
+      "typing_extensions==4.16.0"
+    ],
+    "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "scipy": "1.18.1",
+    "torch": "2.14.1+cpu"
+  },
+  "loader_workers": 0,
+  "omitted_identifiers": [
+    "hostname"
+  ],
+  "origin_sha256": "bfc78984f4dd4cd7e25158439b267161475be0e71972cff96109e3594d20aee5",
+  "runtime": {
+    "inter_threads": 1,
+    "intra_threads": 8
+  },
+  "schema_version": 1,
+  "scope": "Observed formal r2 environment. Package pins do not guarantee cross-machine bitwise model reproduction.",
+  "status": "archived_observation_not_a_new_environment_validation",
+  "study_id": "wrist_fusion_head_budget_v2"
+}

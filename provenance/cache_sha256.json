@@ -1,0 +1,50 @@
+{
+  "test/subject.npy": {
+    "bytes": 25836,
+    "sha256": "e40c97381f8e5760aba86db7b322c8271ad8bcb156b3705eacaf77874971a94d"
+  },
+  "test/window.npy": {
+    "bytes": 51544,
+    "sha256": "a6dc32fdf69976ec4ea0a185feead269b594f655bc4e89a0dd691849bde388df"
+  },
+  "test/x.npy": {
+    "bytes": 105300096,
+    "sha256": "875c3ea8b35dc09534b54f3763744d8438f032238eeead92b1468db0996d22b1"
+  },
+  "test/y.npy": {
+    "bytes": 51544,
+    "sha256": "f660f4b56ca6eb0f16f6926bc7e9afc40e0bc445c3b7014879aa27b4dd0697cd"
+  },
+  "train/subject.npy": {
+    "bytes": 78056,
+    "sha256": "593b3298e7a8e99eb2b9ecfb9379468fa106025e0910c5b907104dee7e51881a"
+  },
+  "train/window.npy": {
+    "bytes": 155984,
+    "sha256": "23e5228eb6b2525204eb2ad3360cf0f92db26fd141e5920e8e9dceca6b7f601d"
+  },
+  "train/x.npy": {
+    "bytes": 319193216,
+    "sha256": "32265221475bc5fc3f7989f33c4d0bbcfec96a1e47bb3336ff14e5d3348ad1ae"
+  },
+  "train/y.npy": {
+    "bytes": 155984,
+    "sha256": "7cafb5ebde15da4114ce94274b388a9f827ecb22fda6741bf806b1619c414381"
+  },
+  "val/subject.npy": {
+    "bytes": 25886,
+    "sha256": "f6b5cfbd9469ce5deae036ce149abb9e74cccc9afa6031b6ff20ef9bfa7b8671"
+  },
+  "val/window.npy": {
+    "bytes": 51644,
+    "sha256": "f13d7b592a3d78895459208fdc769bdf67a55358e60caf3267dea1053c86864e"
+  },
+  "val/x.npy": {
+    "bytes": 105504896,
+    "sha256": "db023308e56920c9bd3fb175d6253506461eb3b5d3f7b0c4659a66f3dbcd1c8d"
+  },
+  "val/y.npy": {
+    "bytes": 51644,
+    "sha256": "9c15e6ea4f21f765671e6d19a1a5ce9067040169e36c71177b5693e784672fdb"
+  }
+}
